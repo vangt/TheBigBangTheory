@@ -19,8 +19,6 @@ namespace TheBigBangTheoryGame.Classes
             Console.WriteLine("Is there 1 or 2 players?");
             string playersNumbers = Console.ReadLine();
 
-            
-
             if (playersNumbers == "1")
             {
                 Console.WriteLine("You choose 1 player mode.");
@@ -203,7 +201,7 @@ namespace TheBigBangTheoryGame.Classes
             }
             else if (player2 == "Rock" || player2 == "Spock")
             {
-                Console.WriteLine(players[0] + " won! Paper beats " + player2 + ".  Sorry " + players[1]);
+                Console.WriteLine(players[0].name + " won! Paper beats " + player2 + ".  Sorry " + players[1].name);
                 players[0].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
@@ -211,7 +209,7 @@ namespace TheBigBangTheoryGame.Classes
             }
             else
             {
-                Console.WriteLine(players[0] + " Lost! Paper does not beat " + player2 + ". YAA!!! for " + players[2]);
+                Console.WriteLine(players[0].name + " Lost! Paper does not beat " + player2 + ". YAA!!! for " + players[1].name);
                 players[1].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
@@ -230,7 +228,7 @@ namespace TheBigBangTheoryGame.Classes
             }
             else if (player2 == "Paper" || player2 == "Lizard")
             {
-                Console.WriteLine(players[0] + " won! Scissors beats " + player2 + ". Sorry " + players[1]);
+                Console.WriteLine(players[0].name + " won! Scissors beats " + player2 + ". Sorry " + players[1].name);
                 players[0].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
@@ -238,7 +236,7 @@ namespace TheBigBangTheoryGame.Classes
             }
             else
             {
-                Console.WriteLine(players[0] + " Lost! Scissors does not beat " + player2 + ". YAA!!! For " + players[1]);
+                Console.WriteLine(players[0].name + " Lost! Scissors does not beat " + player2 + ". YAA!!! For " + players[1].name);
                 players[1].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
@@ -257,7 +255,7 @@ namespace TheBigBangTheoryGame.Classes
             }
             else if (player2 == "Paper" || player2 == "Spock")
             {
-                Console.WriteLine(players[0] + " won! Lizard beats " + player2 + ". Sorry " + players[1]);
+                Console.WriteLine(players[0].name + " won! Lizard beats " + player2 + ". Sorry " + players[1].name);
                 players[0].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
@@ -265,7 +263,7 @@ namespace TheBigBangTheoryGame.Classes
             }
             else
             {
-                Console.WriteLine(players[0] + " Lost! Lizard does not beat " + player2 + ". YAA!!! For " + players[1]);
+                Console.WriteLine(players[0].name + " Lost! Lizard does not beat " + player2 + ". YAA!!! For " + players[1].name);
                 players[1].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
@@ -284,7 +282,7 @@ namespace TheBigBangTheoryGame.Classes
             }
             else if (player2 == "Rock" || player2 == "Scissors")
             {
-                Console.WriteLine(players[0] + " won! Rock beats " + player2 + ". Sorry " + players[1]);
+                Console.WriteLine(players[0].name + " won! Rock beats " + player2 + ". Sorry " + players[1].name);
                 players[0].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
@@ -292,7 +290,7 @@ namespace TheBigBangTheoryGame.Classes
             }
             else
             {
-                Console.WriteLine(players[0] + " Lost! Spock does not beat " + player2 + ". YAA!!! For " + players[1]);
+                Console.WriteLine(players[0].name + " Lost! Spock does not beat " + player2 + ". YAA!!! For " + players[1].name);
                 players[1].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
