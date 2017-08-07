@@ -266,5 +266,34 @@ namespace TheBigBangTheoryGame.Classes
                 StartGame();
             }
         }
+
+        public void GetSpock(string player2)
+        {
+            if (player2 == "Spock")
+            {
+                Console.WriteLine("It is a TIE!  You both choose Spock.");
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+            else if (player2 == "Rock" || player2 == "Scissor")
+            {
+                Console.WriteLine(players[0] + " won! Rock beats " + player2 + ". Sorry " + players[1]);
+                players[0].score += 1;
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+            else
+            {
+                Console.WriteLine(players[0] + " Lost! Spock does not beat " + player2 + ". YAA!!! For " + players[1]);
+                players[1].score += 1;
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+        }
+
+
     }
 }
