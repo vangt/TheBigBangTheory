@@ -53,6 +53,7 @@ namespace TheBigBangTheoryGame.Classes
 
         public void StartGame()
         {
+            
             if (players[0].score == 2)
             {
                 Console.WriteLine("Player 1 WINS!!!");
@@ -65,9 +66,18 @@ namespace TheBigBangTheoryGame.Classes
             }
             else
             {
-                string player1 = GetChoices();
-                string player2 = GetChoices();
-              
+                string player1 = GetChoices(1);
+                string player2;
+
+                if (players[1].isAI == true)
+                {
+                    player2 = GetChoices(0);
+                }
+                else
+                {
+                    player2 = GetChoices(1);
+                }
+
                 GetOutCome(player1, player2);
             }
         }
