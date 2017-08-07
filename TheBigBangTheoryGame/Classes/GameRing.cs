@@ -14,6 +14,21 @@ namespace TheBigBangTheoryGame.Classes
         { 
         }
 
+        public void GetNumberOfPlayers()
+        {
+            Console.WriteLine("Is there 1 or 2 players?");
+            int playersNumbers = int.Parse(Console.ReadLine());
 
+            if (playersNumbers == 1)
+            {
+                Console.WriteLine("You choose 1 player mode.");
+                GetPlayerInfo();
+                Players playerAI = new Players();
+                playerAI.name = "Player 2 AI";
+                playerAI.score = 0;
+                playerAI.isAI = true;
+                players.Add(playerAI);
+            }
+        }
     }
 }
