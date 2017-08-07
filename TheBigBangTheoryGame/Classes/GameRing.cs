@@ -29,6 +29,13 @@ namespace TheBigBangTheoryGame.Classes
                 playerAI.isAI = true;
                 players.Add(playerAI);
             }
+            else
+            {
+                GetPlayerInfo();
+                GetPlayerInfo();
+            }
+
+            StartGame();
         }
 
         public void GetPlayerInfo()
