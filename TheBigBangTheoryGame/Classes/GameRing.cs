@@ -30,5 +30,15 @@ namespace TheBigBangTheoryGame.Classes
                 players.Add(playerAI);
             }
         }
+
+        public void GetPlayerInfo()
+        {
+            Players player = new Players();
+            player.name = Console.ReadLine();
+            player.score = 0;
+            players.Add(player);
+        }
+
+
     }
 }
