@@ -156,5 +156,34 @@ namespace TheBigBangTheoryGame.Classes
                     break;
             }
         }
+
+
+
+        public void GetRock(string player2)
+        {
+            if (player2 == "Rock")
+            {
+                Console.WriteLine("It is a TIE!  Both players choose Rock.");
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+            else if (player2 == "Lizard" || player2 == "Scissor")
+            {
+                Console.WriteLine(players[0].name + " won! Rock beats " + player2 + ". Sorry " + players[1].name);
+                players[0].score += 1;
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+            else
+            {
+                Console.WriteLine(players[0].name + " Lost! Rock does not beat " + player2 + ". YAA for " + players[1].name);
+                players[1].score += 1;
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+        }
     }
 }
