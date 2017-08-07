@@ -119,25 +119,18 @@ namespace TheBigBangTheoryGame.Classes
             if (player2 == "Rock")
             {
                 Console.WriteLine("It is a TIE!  Both players choose Rock.");
-                ScoreSheet();
-                Console.ReadLine();
-                StartGame();
+                GetTie()
             }
             else if (player2 == "Lizard" || player2 == "Scissors")
             {
                 Console.WriteLine(players[0].name + " won! Rock beats " + player2 + ". Sorry " + players[1].name);
-                players[0].score += 1;
-                ScoreSheet();
-                Console.ReadLine();
-                StartGame();
+                UpdatePlayerOne();
             }
             else
             {
                 Console.WriteLine(players[0].name + " Lost! Rock does not beat " + player2 + ". YAA!! For " + players[1].name);
                 players[1].score += 1;
-                ScoreSheet();
-                Console.ReadLine();
-                StartGame();
+                UpdatePlayerTwo();
             }
         }
 
@@ -146,25 +139,17 @@ namespace TheBigBangTheoryGame.Classes
             if (player2 == "Paper")
             {
                 Console.WriteLine("It is a TIE!  You both choose Paper.");
-                ScoreSheet();
-                Console.ReadLine();
-                StartGame();
+                GetTie();
             }
             else if (player2 == "Rock" || player2 == "Spock")
             {
                 Console.WriteLine(players[0].name + " won! Paper beats " + player2 + ".  Sorry " + players[1].name);
-                players[0].score += 1;
-                ScoreSheet();
-                Console.ReadLine();
-                StartGame();
+                UpdatePlayerOne();
             }
             else
             {
                 Console.WriteLine(players[0].name + " Lost! Paper does not beat " + player2 + ". YAA!!! for " + players[1].name);
-                players[1].score += 1;
-                ScoreSheet();
-                Console.ReadLine();
-                StartGame();
+                UpdatePlayerTwo();
             }
         }
 
@@ -173,25 +158,17 @@ namespace TheBigBangTheoryGame.Classes
             if (player2 == "Scissors")
             {
                 Console.WriteLine("It is a TIE!  You both choose Scissors.");
-                ScoreSheet();
-                Console.ReadLine();
-                StartGame();
+                GetTie();
             }
             else if (player2 == "Paper" || player2 == "Lizard")
             {
                 Console.WriteLine(players[0].name + " won! Scissors beats " + player2 + ". Sorry " + players[1].name);
-                players[0].score += 1;
-                ScoreSheet();
-                Console.ReadLine();
-                StartGame();
+                UpdatePlayerOne();
             }
             else
             {
                 Console.WriteLine(players[0].name + " Lost! Scissors does not beat " + player2 + ". YAA!!! For " + players[1].name);
-                players[1].score += 1;
-                ScoreSheet();
-                Console.ReadLine();
-                StartGame();
+                UpdatePlayerTwo();
             }
         }
 
@@ -200,25 +177,17 @@ namespace TheBigBangTheoryGame.Classes
             if (player2 == "Lizard")
             {
                 Console.WriteLine("It is a TIE!  You both choose Lizard.");
-                ScoreSheet();
-                Console.ReadLine();
-                StartGame();
+                GetTie();
             }
             else if (player2 == "Paper" || player2 == "Spock")
             {
                 Console.WriteLine(players[0].name + " won! Lizard beats " + player2 + ". Sorry " + players[1].name);
-                players[0].score += 1;
-                ScoreSheet();
-                Console.ReadLine();
-                StartGame();
+                UpdatePlayerOne();
             }
             else
             {
                 Console.WriteLine(players[0].name + " Lost! Lizard does not beat " + player2 + ". YAA!!! For " + players[1].name);
-                players[1].score += 1;
-                ScoreSheet();
-                Console.ReadLine();
-                StartGame();
+                UpdatePlayerTwo();
             }
         }
 
@@ -227,16 +196,19 @@ namespace TheBigBangTheoryGame.Classes
             if (player2 == "Spock")
             {
                 Console.WriteLine("It is a TIE!  You both choose Spock.");
+                GetTie();
                 
             }
             else if (player2 == "Rock" || player2 == "Scissors")
             {
                 Console.WriteLine(players[0].name + " won! Rock beats " + player2 + ". Sorry " + players[1].name);
+                UpdatePlayerOne();
                 
             }
             else
             {
                 Console.WriteLine(players[0].name + " Lost! Spock does not beat " + player2 + ". YAA!!! For " + players[1].name);
+                UpdatePlayerTwo();
                 
             }
         }
