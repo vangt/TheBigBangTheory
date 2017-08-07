@@ -57,12 +57,12 @@ namespace TheBigBangTheoryGame.Classes
             
             if (players[0].score == 2)
             {
-                Console.WriteLine("WE HAVE OUR CHAMPION!!!" + players[0] + " WINS!!!");
+                Console.WriteLine("WE HAVE OUR CHAMPION!!!" + players[0].name + " WINS!!!");
                 Console.ReadLine();
             }
             else if (players[1].score == 2)
             {
-                Console.WriteLine("WE HAVE OUT CHAMPION!!!" + players[1] + " WINS!!!");
+                Console.WriteLine("WE HAVE OUT CHAMPION!!!" + players[1].name + " WINS!!!");
                 Console.ReadLine();
             }
             else
