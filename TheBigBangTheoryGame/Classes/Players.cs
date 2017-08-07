@@ -13,5 +13,9 @@ namespace TheBigBangTheoryGame.Classes
         public double score;
 
         public bool isAI;
+
+        public Players()
+        {
+        }
     }
 }

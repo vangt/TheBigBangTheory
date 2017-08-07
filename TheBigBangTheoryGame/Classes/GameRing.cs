@@ -9,5 +9,11 @@ namespace TheBigBangTheoryGame.Classes
     public class GameRing
     {
         List<Players> players = new List<Players>();
+
+        public GameRing()
+        { 
+        }
+
+
     }
 }
