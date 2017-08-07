@@ -26,7 +26,7 @@ namespace TheBigBangTheoryGame.Classes
                 GetPlayerInfo();
                 AIPlayer playerAI = new AIPlayer();
                 players.Add(playerAI);
-                Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0] + " VS " + players[1] + "!!!! \n THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
+                Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0].name + " VS " + players[1].name + "!!!! \n THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
                 Console.ReadLine();
                 StartGame();
             }
@@ -36,7 +36,7 @@ namespace TheBigBangTheoryGame.Classes
                 GetPlayerInfo();
                 Console.WriteLine("Please enter player 2 information.");
                 GetPlayerInfo();
-                Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0] + " VS " + players[1] + "!!!! \n THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
+                Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0].name + " VS " + players[1].name + "!!!! \n THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
                 Console.ReadLine();
                 StartGame();
             }
@@ -77,6 +77,7 @@ namespace TheBigBangTheoryGame.Classes
                 if (players[1].isAI == true)
                 {
                     player2 = players[1].GetChoice();
+                    Console.WriteLine("Player 2 AI has made it's choice.");
                 }
                 else
                 {
@@ -129,7 +130,6 @@ namespace TheBigBangTheoryGame.Classes
             else
             {
                 Console.WriteLine(players[0].name + " Lost! Rock does not beat " + player2 + ". YAA!! For " + players[1].name);
-                players[1].score += 1;
                 UpdatePlayerTwo();
             }
         }
