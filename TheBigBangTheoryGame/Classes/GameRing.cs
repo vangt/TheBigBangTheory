@@ -185,5 +185,32 @@ namespace TheBigBangTheoryGame.Classes
                 StartGame();
             }
         }
+
+        public void GetPaper(string player2)
+        {
+            if (player2 == "Paper")
+            {
+                Console.WriteLine("It is a TIE!  You both choose Paper.");
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+            else if (player2 == "Rock" || player2 == "Spock")
+            {
+                Console.WriteLine("Player 1 won! Paper beats " + player2 + ".");
+                players[0].score += 1;
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+            else
+            {
+                Console.WriteLine("Player 1 Lost! Paper does not beat " + player2 + ".");
+                players[1].score += 1;
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+        }
     }
 }
