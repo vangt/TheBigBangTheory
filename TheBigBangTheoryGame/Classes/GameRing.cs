@@ -29,6 +29,9 @@ namespace TheBigBangTheoryGame.Classes
                 playerAI.score = 0;
                 playerAI.isAI = true;
                 players.Add(playerAI);
+                Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0] + " VS " + players[1] + "!!!! THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
+                Console.ReadLine();
+                StartGame();
             }
             else if(playersNumbers == "2")
             {
@@ -36,16 +39,15 @@ namespace TheBigBangTheoryGame.Classes
                 GetPlayerInfo();
                 Console.WriteLine("Please enter player 2 information.");
                 GetPlayerInfo();
+                Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0] + " VS " + players[1] + "!!!! THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
+                Console.ReadLine();
+                StartGame();
             }
             else
             {
                 Console.WriteLine("You did not input 1 or 2. Please choose again.");
                 GetNumberOfPlayers();
             }
-
-            Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0] + " VS " + players[1] + "!!!! THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
-            Console.ReadLine();
-            StartGame();
         }
 
         public void GetPlayerInfo()
