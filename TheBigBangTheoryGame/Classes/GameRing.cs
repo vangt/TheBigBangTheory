@@ -239,5 +239,32 @@ namespace TheBigBangTheoryGame.Classes
                 StartGame();
             }
         }
+
+        public void GetLizard(string player2)
+        {
+            if (player2 == "Lizard")
+            {
+                Console.WriteLine("It is a TIE!  You both choose Lizard.");
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+            else if (player2 == "Paper" || player2 == "Spock")
+            {
+                Console.WriteLine(players[0] + " won! Lizard beats " + player2 + ". Sorry " + players[1]);
+                players[0].score += 1;
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+            else
+            {
+                Console.WriteLine(players[0] + " Lost! Lizard does not beat " + player2 + ". YAA!!! For " + players[1]);
+                players[1].score += 1;
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+        }
     }
 }
