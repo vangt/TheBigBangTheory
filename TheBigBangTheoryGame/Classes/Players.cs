@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace TheBigBangTheoryGame.Classes
 {
-    class Players
+    public class Players
     {
+        public string name;
+
+        public double score;
+
+        public bool isAI;
     }
 }
