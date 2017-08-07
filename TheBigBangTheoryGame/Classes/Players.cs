@@ -17,5 +17,10 @@ namespace TheBigBangTheoryGame.Classes
         public Players()
         {
         }
+
+        public virtual string GetChoice()
+        {
+            return "";
+        }
     }
 }

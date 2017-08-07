@@ -71,28 +71,28 @@ namespace TheBigBangTheoryGame.Classes
             }
             else
             {
-                string player1 = GetChoices(1);
+                string player1 = GetChoices();
                 string player2;
 
                 if (players[1].isAI == true)
                 {
-                    player2 = GetChoices(0);
+                    player2 = players[1].GetChoice();
                 }
                 else
                 {
-                    player2 = GetChoices(1);
+                    player2 = GetChoices();
                 }
 
                 GetOutCome(player1, player2);
             }
         }
 
-        public string GetChoices(int number)
+        public string GetChoices()
         {
             Console.WriteLine("Player please choose your selection.");
             Console.WriteLine("Choose a number \n 1: Rock \n 2: Paper \n 3: Scissors \n 4: Lizard \n 5: Spock \n");
 
-            string choice = GetNumber(number);
+            string choice = Console.ReadLine();
 
             switch (choice)
             {
@@ -113,26 +113,9 @@ namespace TheBigBangTheoryGame.Classes
                     return choice;
                 default:
                     Console.WriteLine("You did not choose a number on the list.");
-                    choice = GetChoices(number);
+                    choice = GetChoices();
                     return choice;
             }
-        }
-
-        public string GetNumber(int number)
-        {
-            string answer;
-
-            if (number == 1)
-            {
-                answer = Console.ReadLine();
-            }
-            else
-            {
-                Random random = new Random();
-                answer = random.Next(1, 5).ToString();
-            }
-
-            return answer;
         }
 
         public void GetOutCome(string player1, string player2)
