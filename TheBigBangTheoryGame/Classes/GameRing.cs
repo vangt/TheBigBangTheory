@@ -178,7 +178,7 @@ namespace TheBigBangTheoryGame.Classes
             }
             else
             {
-                Console.WriteLine(players[0].name + " Lost! Rock does not beat " + player2 + ". YAA for " + players[1].name);
+                Console.WriteLine(players[0].name + " Lost! Rock does not beat " + player2 + ". YAA!! For " + players[1].name);
                 players[1].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
@@ -197,7 +197,7 @@ namespace TheBigBangTheoryGame.Classes
             }
             else if (player2 == "Rock" || player2 == "Spock")
             {
-                Console.WriteLine("Player 1 won! Paper beats " + player2 + ".");
+                Console.WriteLine(players[0] + " won! Paper beats " + player2 + ".  Sorry " + players[1]);
                 players[0].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
@@ -205,7 +205,34 @@ namespace TheBigBangTheoryGame.Classes
             }
             else
             {
-                Console.WriteLine("Player 1 Lost! Paper does not beat " + player2 + ".");
+                Console.WriteLine(players[0] + " Lost! Paper does not beat " + player2 + ". YAA!!! for " + players[2]);
+                players[1].score += 1;
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+        }
+
+        public void GetScissors(string player2)
+        {
+            if (player2 == "Scissors")
+            {
+                Console.WriteLine("It is a TIE!  You both choose Scissors.");
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+            else if (player2 == "Paper" || player2 == "Lizard")
+            {
+                Console.WriteLine(players[0] + " won! Scissor beats " + player2 + ". Sorry " + players[1]);
+                players[0].score += 1;
+                ScoreSheet();
+                Console.ReadLine();
+                StartGame();
+            }
+            else
+            {
+                Console.WriteLine(players[0] + " Lost! Scissor does not beat " + player2 + ". YAA!!! For " + players[1]);
                 players[1].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
