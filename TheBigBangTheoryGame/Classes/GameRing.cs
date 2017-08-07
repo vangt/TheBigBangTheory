@@ -46,6 +46,7 @@ namespace TheBigBangTheoryGame.Classes
         public void GetPlayerInfo()
         {
             Players player = new Players();
+            Console.WriteLine("Please enter your name.");
             player.name = Console.ReadLine();
             player.score = 0;
             players.Add(player);

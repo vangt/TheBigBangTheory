@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheBigBangTheoryGame.Classes;
 
 namespace TheBigBangTheoryGame
 {
@@ -10,6 +11,8 @@ namespace TheBigBangTheoryGame
     {
         static void Main(string[] args)
         {
+            GameRing championships = new GameRing();
+            championships.GetNumberOfPlayers();
         }
     }
 }
