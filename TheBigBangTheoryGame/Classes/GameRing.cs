@@ -17,9 +17,11 @@ namespace TheBigBangTheoryGame.Classes
         public void GetNumberOfPlayers()
         {
             Console.WriteLine("Is there 1 or 2 players?");
-            int playersNumbers = int.Parse(Console.ReadLine());
+            string playersNumbers = Console.ReadLine();
 
-            if (playersNumbers == 1)
+            
+
+            if (playersNumbers == "1")
             {
                 Console.WriteLine("You choose 1 player mode.");
                 Console.WriteLine("Please enter player 1 information.");
@@ -30,12 +32,17 @@ namespace TheBigBangTheoryGame.Classes
                 playerAI.isAI = true;
                 players.Add(playerAI);
             }
-            else
+            else if(playersNumbers == "2")
             {
                 Console.WriteLine("Please enter player 1 information.");
                 GetPlayerInfo();
                 Console.WriteLine("Please enter player 2 information.");
                 GetPlayerInfo();
+            }
+            else
+            {
+                Console.WriteLine("You did not input 1 or 2. Please choose again.");
+                GetNumberOfPlayers();
             }
 
             Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0] + " VS " + players[1] + "!!!! THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
