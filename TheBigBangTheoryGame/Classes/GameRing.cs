@@ -26,7 +26,7 @@ namespace TheBigBangTheoryGame.Classes
                 GetPlayerInfo();
                 AIPlayer playerAI = new AIPlayer();
                 players.Add(playerAI);
-                Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0] + " VS " + players[1] + "!!!! THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
+                Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0] + " VS " + players[1] + "!!!! \n THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
                 Console.ReadLine();
                 StartGame();
             }
@@ -36,7 +36,7 @@ namespace TheBigBangTheoryGame.Classes
                 GetPlayerInfo();
                 Console.WriteLine("Please enter player 2 information.");
                 GetPlayerInfo();
-                Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0] + " VS " + players[1] + "!!!! THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
+                Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0] + " VS " + players[1] + "!!!! \n THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
                 Console.ReadLine();
                 StartGame();
             }
@@ -119,7 +119,7 @@ namespace TheBigBangTheoryGame.Classes
             if (player2 == "Rock")
             {
                 Console.WriteLine("It is a TIE!  Both players choose Rock.");
-                GetTie()
+                GetTie();
             }
             else if (player2 == "Lizard" || player2 == "Scissors")
             {
@@ -197,19 +197,16 @@ namespace TheBigBangTheoryGame.Classes
             {
                 Console.WriteLine("It is a TIE!  You both choose Spock.");
                 GetTie();
-                
             }
             else if (player2 == "Rock" || player2 == "Scissors")
             {
                 Console.WriteLine(players[0].name + " won! Rock beats " + player2 + ". Sorry " + players[1].name);
                 UpdatePlayerOne();
-                
             }
             else
             {
                 Console.WriteLine(players[0].name + " Lost! Spock does not beat " + player2 + ". YAA!!! For " + players[1].name);
                 UpdatePlayerTwo();
-                
             }
         }
 
