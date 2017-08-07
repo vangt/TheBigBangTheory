@@ -24,10 +24,7 @@ namespace TheBigBangTheoryGame.Classes
                 Console.WriteLine("You choose 1 player mode.");
                 Console.WriteLine("Please enter player 1 information.");
                 GetPlayerInfo();
-                Players playerAI = new Players();
-                playerAI.name = "Player 2 AI";
-                playerAI.score = 0;
-                playerAI.isAI = true;
+                AIPlayer playerAI = new AIPlayer();
                 players.Add(playerAI);
                 Console.WriteLine("WELCOME TO THE WORLD ROCK, PAPER, SCISSORS, LIZARD, AND SPOCK COMPETITIONS!!!  WE HAVE OUR PLAYERS. PLAYER " + players[0] + " VS " + players[1] + "!!!! THE COMPETITION IS BEST 2 OUT OF 3! NOW LET THE GAMES BEGIN!!!");
                 Console.ReadLine();
