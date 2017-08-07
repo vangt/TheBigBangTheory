@@ -144,7 +144,7 @@ namespace TheBigBangTheoryGame.Classes
                     GetPaper(player2);
                     break;
                 case "Scissors":
-                    GetScissor(player2);
+                    GetScissors(player2);
                     break;
                 case "Lizard":
                     GetLizard(player2);
@@ -157,8 +157,6 @@ namespace TheBigBangTheoryGame.Classes
             }
         }
 
-
-
         public void GetRock(string player2)
         {
             if (player2 == "Rock")
@@ -168,7 +166,7 @@ namespace TheBigBangTheoryGame.Classes
                 Console.ReadLine();
                 StartGame();
             }
-            else if (player2 == "Lizard" || player2 == "Scissor")
+            else if (player2 == "Lizard" || player2 == "Scissors")
             {
                 Console.WriteLine(players[0].name + " won! Rock beats " + player2 + ". Sorry " + players[1].name);
                 players[0].score += 1;
@@ -224,7 +222,7 @@ namespace TheBigBangTheoryGame.Classes
             }
             else if (player2 == "Paper" || player2 == "Lizard")
             {
-                Console.WriteLine(players[0] + " won! Scissor beats " + player2 + ". Sorry " + players[1]);
+                Console.WriteLine(players[0] + " won! Scissors beats " + player2 + ". Sorry " + players[1]);
                 players[0].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
@@ -232,7 +230,7 @@ namespace TheBigBangTheoryGame.Classes
             }
             else
             {
-                Console.WriteLine(players[0] + " Lost! Scissor does not beat " + player2 + ". YAA!!! For " + players[1]);
+                Console.WriteLine(players[0] + " Lost! Scissors does not beat " + player2 + ". YAA!!! For " + players[1]);
                 players[1].score += 1;
                 ScoreSheet();
                 Console.ReadLine();
@@ -276,7 +274,7 @@ namespace TheBigBangTheoryGame.Classes
                 Console.ReadLine();
                 StartGame();
             }
-            else if (player2 == "Rock" || player2 == "Scissor")
+            else if (player2 == "Rock" || player2 == "Scissors")
             {
                 Console.WriteLine(players[0] + " won! Rock beats " + player2 + ". Sorry " + players[1]);
                 players[0].score += 1;
@@ -294,6 +292,9 @@ namespace TheBigBangTheoryGame.Classes
             }
         }
 
-
+        public void ScoreSheet()
+        {
+            Console.WriteLine(players[0].name + ": " + players[0].score + " to " + players[1].name +": " + players[1].score);
+        }
     }
 }
