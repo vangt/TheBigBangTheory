@@ -85,7 +85,7 @@ namespace TheBigBangTheoryGame.Classes
         public string GetChoices(int number)
         {
             Console.WriteLine("Player please choose your selection.");
-            Console.WriteLine("Choose a number \n 1: Rock \n 2: Paper \n 3: Scissor \n 4: Lizard \n 5: Spock \n");
+            Console.WriteLine("Choose a number \n 1: Rock \n 2: Paper \n 3: Scissors \n 4: Lizard \n 5: Spock \n");
 
             string choice = GetNumber(number);
 
@@ -98,7 +98,7 @@ namespace TheBigBangTheoryGame.Classes
                     choice = "Paper";
                     return choice;
                 case "3":
-                    choice = "Scissor";
+                    choice = "Scissors";
                     return choice;
                 case "4":
                     choice = "Lizard";
@@ -128,6 +128,33 @@ namespace TheBigBangTheoryGame.Classes
             }
 
             return answer;
+        }
+
+        public void GetOutCome(string player1, string player2)
+        {
+            Console.WriteLine("The choices have been made!");
+            Console.ReadLine();
+
+            switch (player1)
+            {
+                case "Rock":
+                    GetRock(player2);
+                    break;
+                case "Paper":
+                    GetPaper(player2);
+                    break;
+                case "Scissors":
+                    GetScissor(player2);
+                    break;
+                case "Lizard":
+                    GetLizard(player2);
+                    break;
+                case "Spock":
+                    GetSpock(player2);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
