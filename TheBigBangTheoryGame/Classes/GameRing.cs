@@ -112,5 +112,22 @@ namespace TheBigBangTheoryGame.Classes
                     return choice;
             }
         }
+
+        public string GetNumber(int number)
+        {
+            string answer;
+
+            if (number == 1)
+            {
+                answer = Console.ReadLine();
+            }
+            else
+            {
+                Random random = new Random();
+                answer = random.Next(1, 5).ToString();
+            }
+
+            return answer;
+        }
     }
 }
