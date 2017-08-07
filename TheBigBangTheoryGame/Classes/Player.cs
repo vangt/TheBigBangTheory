@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheBigBangTheoryGame.Classes
 {
-    public class Players
+    public class Player
     {
         public string name;
 
@@ -14,7 +14,7 @@ namespace TheBigBangTheoryGame.Classes
 
         public bool isAI;
 
-        public Players()
+        public Player()
         {
         }
 

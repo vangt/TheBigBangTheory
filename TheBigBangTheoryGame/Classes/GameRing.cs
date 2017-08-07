@@ -8,7 +8,7 @@ namespace TheBigBangTheoryGame.Classes
 {
     public class GameRing
     {
-        List<Players> players = new List<Players>();
+        List<Player> players = new List<Player>();
 
         public GameRing()
         { 
@@ -49,7 +49,7 @@ namespace TheBigBangTheoryGame.Classes
 
         public void GetPlayerInfo()
         {
-            Players player = new Players();
+            Player player = new Player();
             Console.WriteLine("Please enter your name.");
             player.name = Console.ReadLine();
             player.score = 0;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheBigBangTheoryGame.Classes
 {
-    public class AIPlayer : Players
+    public class AIPlayer : Player
     {
         public AIPlayer()
         {
