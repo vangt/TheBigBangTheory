@@ -20,7 +20,7 @@ namespace TheBigBangTheoryGame.Classes
             string choice = "";
 
             Random random = new Random();
-            choice = random.Next(1, 5).ToString();
+            choice = random.Next(1, 6).ToString();
             
             choice = GetRPSLS(choice);
 
